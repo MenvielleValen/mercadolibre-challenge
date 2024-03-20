@@ -1,0 +1,21 @@
+@import "../../../sass/variables";
+
+.breadcrum_item__container{
+    margin-right: calc($spacing-100 / 2);
+    a{
+        text-decoration: none;
+        color: $gray-300;
+        font-size: $font-200;
+        &.bold{
+            font-weight: 800;
+        }
+    }
+}
+
+.breadcrum_item__arrow{
+    color: $gray-300;
+    margin-left: calc($spacing-100 / 2);
+    &:hover {
+        cursor: default;
+    }
+}

@@ -1,0 +1,11 @@
+@import "../../sass/variables";
+
+.breadcrumbs_list{
+    ol{
+        margin: $spacing-100 0 $spacing-100;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+}

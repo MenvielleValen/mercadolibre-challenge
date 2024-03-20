@@ -1,0 +1,82 @@
+@import "../../sass/variables";
+
+.item__container {
+    text-decoration: none;
+    color: $gray-400;
+
+    .item__wrapper {
+        display: flex;
+        padding: $spacing-100;
+        background-color: $white;
+
+        .item_image {
+            width: 180px;
+            height: 180px;
+            overflow: hidden;
+            margin-right: $spacing-100;
+            border-radius: 4px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 4px;
+            }
+        }
+
+        .item_details__container {
+            padding-top: $spacing-100;
+            flex: 0.9;
+            display: flex;
+            justify-content: space-between;
+
+            .item_location__container {
+                flex: 0.1;
+
+                span {
+                    color: $gray-300;
+                    font-size: $font-100
+                }
+            }
+
+        }
+
+        .item_header__container {
+            flex: 0.8;
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                font-size: $font-400;
+                font-weight: 500;
+            }
+
+            .item_price__container {
+                display: flex;
+                align-items: center;
+                margin-bottom: $spacing-200;
+
+                h3 {
+                    font-size: $font-500;
+                    font-weight: 600;
+                    margin-right: $spacing-100;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .item__wrapper {
+        flex-direction: column;
+
+        .item_image {
+            width: 100% !important;
+            object-fit: cover;
+        }
+
+        .item_details__container {
+            flex-direction: column;
+        }
+    }
+}

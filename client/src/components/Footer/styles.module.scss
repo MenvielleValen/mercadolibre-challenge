@@ -1,0 +1,30 @@
+@import "../../sass/variables";
+
+.footer__container {
+  position: relative;
+  margin-top: $spacing-300;
+  height: 80px;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid #e6e6e6;
+
+  p {
+    color: $gray-300;
+  }
+  a {
+    color: $gray-400;
+    font-weight: 600;
+  }
+
+  .footer_base {
+    position: absolute;
+    height: 8px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $primary_color;
+  }
+}

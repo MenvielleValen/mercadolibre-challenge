@@ -1,0 +1,13 @@
+@import "../../sass/variables";
+
+.logo__container {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: $screen-sm) {
+  .logo__container {
+    display: none;
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,27 @@
+@import '../../sass/variables';
+
+.navbar {
+    background-color: $primary_color;
+    padding: $spacing-100 0;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container{
+        margin: 0 auto;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        gap: $spacing-200;
+    }
+
+    @media (max-width: $screen-xlg) {
+        .container {
+            width: 85%;
+        }
+    }
+    
+}
+

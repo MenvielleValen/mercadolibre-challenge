@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a la API de Mercado Libre Doc</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          height: 100vh;
+          background-image: radial-gradient(rgba(204, 204, 204, 0.65) 2px, transparent 2px), radial-gradient(rgba(204, 204, 204, 0.65) 2px, transparent 2px);
+          background-size: 33px 33px;
+          background-position: 0 0, 16.5px 16.5px;
+          background-color: #f0f0f0;
+        }
+        p{
+          margin: 0;
+          padding: 0;
+        }
+        .container {
+          text-align: center;
+          width: 80%;
+        }
+        h1 {
+          font-size: 36px;
+          color: #333;
+        }
+        h4{
+          margin: 0;
+          padding: 0;
+        }
+        table {
+          margin-top: 20px;
+          border-collapse: collapse;
+          width: 100%;
+          background-color: #fff;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+          padding: 12px 15px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+          min-width: 100px;
+        }
+        th {
+          background-color: #f2f2f2;
+          font-weight: bold;
+          text-align: center;
+        }
+        tr:hover {
+          background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Doc API de Mercado Libre Challenge</h1>
+        <p>(*) firma: parámetro <strong><i>author</i></strong> enviado en headers.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 200px;">Ruta</th>
+                    <th>Método</th>
+                    <th>Req. Firma</th>
+                    <th>Descripción</th>
+                    <th>Parámetros</th>
+                    <th>Respuesta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="color: #3483fa;"><strong>/api/items?q={query}</strong></td>
+                    <td>GET</td>
+                    <td>Si</td>
+                    <td style="text-align: center;">Permite realizar una búsqueda de items en Mercado Libre.</td>
+                    <td>query <strong>(String)</strong>: Consulta de búsqueda.</td>
+                    <td>
+                        <ul>
+                            <li>200 OK: Retorna una lista de items encontrados.</li>
+                            <li>400 Bad Request: Si la consulta de búsqueda es inválida.</li>
+                            <li>403 Forbidden: Si no se envió la firma o es inválida.</li>
+                            <li>500 Internal Server Error: Si ocurre un error interno en el servidor.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #3483fa;"><strong>/api/items/:id</strong></td>
+                    <td>GET</td>
+                    <td>Si</td>
+                    <td style="text-align: center;">Permite obtener los detalles de un item específico en Mercado Libre.</td>
+                    <td>id <strong>(String)</strong>: ID único del item.</td>
+                    <td>
+                        <ul>
+                            <li>200 OK: Retorna los detalles del item solicitado.</li>
+                            <li>404 Not Found: Si el item no fue encontrado.</li>
+                            <li>403 Forbidden: Si no se envió la firma o es inválida.</li>
+                            <li>500 Internal Server Error: Si ocurre un error interno en el servidor.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

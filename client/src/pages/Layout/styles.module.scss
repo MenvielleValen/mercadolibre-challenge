@@ -1,0 +1,13 @@
+@import "../../sass/variables";
+
+.layout{
+    margin: 0 auto;
+    width: 70%;
+    flex: 1;
+}
+
+@media (max-width: $screen-xlg) {
+    .layout {
+        width: 85%;
+    }
+}

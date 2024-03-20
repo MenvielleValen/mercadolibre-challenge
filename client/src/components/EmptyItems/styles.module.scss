@@ -1,0 +1,42 @@
+@import "../../sass/variables";
+
+.empty_items__container {
+  width: 70%;
+  display: flex;
+  background-color: $white;
+  gap: $spacing-300;
+  padding: $spacing-200;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+
+  .empty_items__details {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-200;
+    h3 {
+      font-size: $font-500;
+    }
+    ul {
+      list-style: none;
+      li {
+        color: rgba(0, 0, 0, 0.9);
+        line-height: 1.231;
+        list-style-position: outside;
+        list-style-type: disc;
+        margin-bottom: 3px;
+        margin-left: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-lg) {
+  .empty_items__container {
+    flex-direction: column;
+
+    h3 {
+      text-align: center;
+    }
+  }
+}

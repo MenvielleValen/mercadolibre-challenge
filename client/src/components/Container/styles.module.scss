@@ -1,0 +1,11 @@
+@import '../../sass/variables';
+
+.section__container{
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-100;
+    margin-top: $spacing-100;
+}

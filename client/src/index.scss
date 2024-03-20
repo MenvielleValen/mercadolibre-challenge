@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;800&display=swap');
+@import './sass/variables';
+@import url("https://use.typekit.net/rvh8nsw.css");
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: $gray-200;
+    opacity: 1;
+}
+
+body {
+    font-family: 'Nunito', 'Roboto', Helvetica, Arial, sans-serif;
+    background-color: $gray-100;
+    word-break: break-word;
+    color: $gray-400;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    color: $gray-400;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 1s ease-in-out;
+    transition-delay: 5000s;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}

@@ -1,0 +1,22 @@
+@import "../../sass/variables";
+@import "../../sass/animations";
+
+.item_list__container {
+  list-style: none;
+  background-color: $white;
+  border-radius: 4px;
+  overflow: hidden;
+  @include fade-in-animation(0.8s);
+  li {
+    position: relative;
+
+    .item_list__divider {
+      position: absolute;
+      bottom: 0;
+      left: $spacing-100;
+      right: $spacing-100;
+      height: 2px;
+      background-color: $gray-100;
+    }
+  }
+}
